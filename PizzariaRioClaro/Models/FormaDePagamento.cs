@@ -7,5 +7,6 @@ namespace PizzariaRioClaro.Models
 {
     public class FormaDePagamento
     {
+        public int Id { get; set; }
     }
 }

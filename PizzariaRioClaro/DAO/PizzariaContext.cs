@@ -1,4 +1,5 @@
-﻿using PizzariaRioClaro.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PizzariaRioClaro.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +7,16 @@ using System.Web;
 
 namespace PizzariaRioClaro.DAO
 {
-    public class PizzariaContext
+    public class PizzariaContext : DbContext
     {
+        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Sabores> Sabores { get; set; }
 
 
-
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=PizzariaDB;Trusted_Connection=true;");
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=PizzariaDB;Trusted_Connection=true;");
+        }
     }
 }

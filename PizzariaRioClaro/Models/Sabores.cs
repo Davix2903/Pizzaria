@@ -7,6 +7,8 @@ namespace PizzariaRioClaro.Models
 {
     public class Sabores
     {
-
+        public int Id { get; set; }
+        public string Sabor { get; set; }
+        public char TipoPizza { get; set; }
     }
 }

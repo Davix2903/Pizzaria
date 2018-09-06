@@ -7,7 +7,8 @@ namespace PizzariaRioClaro.Models
 {
     public class Pessoa
     {
-        public string NomeCmpleto { get; set; }
+        public int Id { get; set; }
+        public string NomeCompleto { get; set; }
         public DateTime DataDeNascimento { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }

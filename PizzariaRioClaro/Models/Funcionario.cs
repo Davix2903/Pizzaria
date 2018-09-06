@@ -7,5 +7,6 @@ namespace PizzariaRioClaro.Models
 {
     public class Funcionario
     {
+        public int Id { get; set; }
     }
 }
