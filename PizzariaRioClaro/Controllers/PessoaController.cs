@@ -40,7 +40,7 @@ namespace PizzariaRioClaro.Controllers
         public ActionResult AdicionaPessoa(Pessoa pessoa, string novamenteASenha)
         {
             PessoaDAO dao = new PessoaDAO();
-            pessoa.TipoDePessoa = 'F';
+            pessoa.TipoDePessoa = 'C';
             if (pessoa.Senha == novamenteASenha)
             {
                 dao.Adiciona(pessoa);
