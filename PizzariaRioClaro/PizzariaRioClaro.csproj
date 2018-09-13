@@ -290,9 +290,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContatoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\PizzasController.cs" />
+    <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="DAO\PizzariaContext.cs" />
     <Compile Include="Filters\AutorizacaoFilterAttribute.cs" />
@@ -353,7 +357,13 @@
     <Content Include="Views\Pessoa\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Pessoa\Cadastro.cshtml" />
-    <Content Include="Views\Menu\Cardapio.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Contato\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Pizzas\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Sobre\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

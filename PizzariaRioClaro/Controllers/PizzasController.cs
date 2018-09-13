@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    public class MenuController : Controller
+    public class PizzasController : Controller
     {
-        // GET: Menu
+        // GET: Pizzas
         public ActionResult Index()
         {
             return View();
