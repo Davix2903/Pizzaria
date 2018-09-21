@@ -2297,6 +2297,14 @@ a.single-search-date {
 
 .single-search-item {margin-bottom: 30px;}
 
+.cadastrarFuncionario{
+    color: orange;
+}
+
+.cadastrarProduto{
+    color: orange;
+}
+
 /*------------------------------------------------------------------
 [ end of style.css ]
 ------------------------------------------------------------------*/

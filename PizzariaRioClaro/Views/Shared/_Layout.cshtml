@@ -49,19 +49,19 @@
                 <div class="main-menu">
                     <div class="menu-main-nav-menu-container">
                         <ul id="menu-main-nav-menu" class="sf-menu">
-                            <li class="menu-item"><a href="~/Home/Index">Home</a></li>
-                            <li class="menu-item"><a href="~/Menu/Index">Menu</a></li>
-                            <li class="menu-item"><a href="~/Pizzas/Index">Pizzas</a></li>
-                            <li class="menu-item"><a href="~/Sobre">Sobre nós</a></li>
-                            <li class="menu-item"><a href="~/Contato/Index">Contato</a></li>
-                            <li class="menu-item"><a href="~/Blog">Blog</a></li>
+                            <li class="menu-item"><a href="/Home">Home</a></li>
+                            <li class="menu-item"><a href="/Menu">Menu</a></li>
+                            <li class="menu-item"><a href="/Pizzas">Pizzas</a></li>
+                            <li class="menu-item"><a href="/Sobre">Sobre nós</a></li>
+                            <li class="menu-item"><a href="/Contato">Contato</a></li>
+                            <li class="menu-item"><a href="/Blog">Blog</a></li>
                             @{
                                 if (Session["PessoaLogada"] as Pessoa != null)
                                 {
                                     var pessoa = Session["PessoaLogada"] as Pessoa;
                                     if (pessoa.TipoDePessoa == 'F')
                                     {
-                                        <li class="menu-item"><a href="admin.html">Admin</a></li>
+                                        <li class="menu-item"><a href="/Admin">Admin</a></li>
                                     }
                                 }
                             }
@@ -105,6 +105,16 @@
                     <li class="menu-item"><a href="~/Sobre">Sobre Nós</a></li>
                     <li class="menu-item"><a href="~/Contato">Contato</a></li>
                     <li class="menu-item"><a href="~/Blog">Blog</a></li>
+                    @{
+                        if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa == 'F')
+                            {
+                                <li class="menu-item"><a href="/Admin/Index">Admin</a></li>
+                            }
+                        }
+                    }
                 </ul>
             </div>
         </div>

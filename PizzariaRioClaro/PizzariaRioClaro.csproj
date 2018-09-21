@@ -286,12 +286,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\ContatoController.cs" />
+    <Compile Include="Controllers\FuncionarioAddController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\PizzasController.cs" />
+    <Compile Include="Controllers\ProdutoAddController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="DAO\PizzariaContext.cs" />
@@ -315,6 +318,10 @@
     <Compile Include="Migrations\20180906184836_NomeCompleto.designer.cs">
       <DependentUpon>20180906184836_NomeCompleto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180914194339_Refrigerante.cs" />
+    <Compile Include="Migrations\20180914194339_Refrigerante.designer.cs">
+      <DependentUpon>20180914194339_Refrigerante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Compra.cs" />
@@ -324,6 +331,7 @@
     <Compile Include="Models\ItensPedido.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Pessoa.cs" />
+    <Compile Include="Models\Refrigerante.cs" />
     <Compile Include="Models\Sabores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -360,6 +368,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Sobre\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\ProdutoAdd\Index.cshtml" />
+    <Content Include="Views\FuncionarioAdd\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

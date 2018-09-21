@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<form class="form-horizontal">
+    <fieldset>
+        <br /><br />
+        <!-- Form Name -->
+        <legend>Cadastro de Funcionários</legend>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtcodigo_produto_id">Nome Completo : </label>
+            <div class="col-md-3">
+                <input id="txtcodigo_produto_id" name="txtcodigo_produto_id" type="text" placeholder="Insira seu nome" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtproduto">Data de Nascimento : </label>
+            <div class="col-md-2">
+                <input id="txtproduto" name="txtproduto" type="date" placeholder="" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtgrupo">Tipo :  </label>
+            <div class="col-md-2">
+                <select id="txtgrupo" name="txtgrupo" class="form-control">
+                    <option value="1">Funcionário</option>
+                    <option value="2">Administrador</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtproduto">Email : </label>
+            <div class="col-md-3">
+                <input id="txtproduto" name="txtproduto" type="email" placeholder="Insira seu email" class="form-control input-md" required="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="txtproduto">Senha : </label>
+            <div class="col-md-3">
+                <input id="txtproduto" name="txtproduto" type="password" placeholder="******" class="form-control input-md" required="">
+
+            </div>
+        </div>
+        <!-- Select Basic -->
+        <!-- Text input-->
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="btnsalvar"></label>
+            <div class="col-md-8">
+                <button id="btnsalvar" name="btnsalvar" class="btn btn-primary">Salvar</button>
+                <button id="btncancelar" name="btncancelar" class="btn btn-danger">Cancelar</button>
+                <button  id="btnsalvar" name="btnhome" class="btn btn-primary">Voltar ao Menu principal</button>
+            </div>
+        </div>
+    </fieldset>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
