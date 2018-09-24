@@ -16,99 +16,20 @@
         <div class="page-wrapper">
             <div class="offer-menu-wrapper">
 
-                <div class="offer-menu-items">
-                    <div class="single-offer-category-item isotope-item cat1">
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Napolitana</div>
-                                <div class="single-offer-content">
-                                    <p>Molho, mussarela, tomates em rodelas, parmesão e azeitonas.</p>
+                        @foreach (var sabor in ViewBag.Sabores)
+                        {
+                            <div class="single-offer-item">
+                                <div class="single-offer-details">
+                                    <div class="single-offer-title">@sabor.Sabor</div>
+                                    <div class="single-offer-content"><p>Molho, mussarela, tomates em rodelas e manjericão</p></div>
                                 </div>
+                                <div class="single-offer-price">$15</div>
+                                <div class="clear"></div>
+                                <br />
+                                <a>Adicionar ao carrinho</a>
+                                <hr />
                             </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Calabresa</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, calabresa, cebola fatiada e orégano.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Mussarela</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, tomate em rodelas e orégano.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Margherita</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, tomates em rodelas e manjericão</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Alho e Óleo</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, alho e azeite de oliva.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">5 Queijos</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, provolone, gorgonzola, parmesão e catupiry.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Frango com Catupiry</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, frango desfiado, catupiry e orégano.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Atum</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, atum, cebola desfiada e orégano.</p></div>
-                            </div>
-                            <div class="single-offer-price">$2.6</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Vegetariana</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, brócolis, palmito, tomate, champignon e cebola.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="single-offer-item">
-                            <div class="single-offer-details">
-                                <div class="single-offer-title">Portuguesa</div>
-                                <div class="single-offer-content"><p>Molho, mussarela, presunto, calabresa, ovos, cebola e azeitonas.</p></div>
-                            </div>
-                            <div class="single-offer-price">$15</div>
-                            <div class="clear"></div>
-                        </div>
+                        }
 
                     </div>
                 </div>

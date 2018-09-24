@@ -10,5 +10,7 @@ namespace PizzariaRioClaro.Models
         public int Id { get; set; }
         public string Sabor { get; set; }
         public char TipoPizza { get; set; }
+        public string Ingredientes { get; set; }
+        public double Preco { get; set; }
     }
 }

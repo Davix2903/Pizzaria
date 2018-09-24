@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzariaRioClaro.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,8 @@ namespace PizzariaRioClaro.Controllers
         // GET: Menu
         public ActionResult Index()
         {
+            ProdutoDAO dao = new ProdutoDAO();
+            ViewBag.Sabores = dao.Lista();
             return View();
         }
     }

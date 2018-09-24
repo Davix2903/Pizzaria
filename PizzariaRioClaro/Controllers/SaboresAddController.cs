@@ -8,22 +8,22 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    public class FuncionarioAddController : Controller
+    public class SaboresAddController : Controller
     {
-        // GET: FuncionarioAdd
+        // GET: ProdutoAdd
         public ActionResult Index()
         {
-            ViewBag.Pessoa = new Pessoa();
+            ViewBag.Sabores = new Sabores();
             return View();
         }
 
         [HttpPost]
-        public ActionResult Adiciona(Pessoa pessoa)
+        public ActionResult Adiciona(Sabores sabores)
         {
-            PessoaDAO dao = new PessoaDAO();
-            if (pessoa != null)
+            ProdutoDAO dao = new ProdutoDAO();
+            if (sabores != null)
             {
-                dao.Adiciona(pessoa);
+                dao.Adiciona(sabores);
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -31,7 +31,7 @@ namespace PizzariaRioClaro.Controllers
                 return RedirectToAction("Index");
             }
 
-               
+
         }
     }
 }

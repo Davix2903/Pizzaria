@@ -194,10 +194,27 @@
     <Content Include="Content\albertos - placehold\css\custom_script.css" />
     <Content Include="Content\albertos - placehold\css\flaticon.css" />
     <Content Include="Content\albertos - placehold\css\font-awesome.css" />
+    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.eot" />
     <Content Include="Content\albertos - placehold\css\fonts\Flaticon.svg" />
+    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.ttf" />
+    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.woff" />
+    <Content Include="Content\albertos - placehold\css\fonts\Flaticond41d.eot" />
+    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.eot" />
     <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.woff2" />
+    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.eot" />
     <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-stroked41d.eot" />
+    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.eot" />
     <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Iconsd41d.eot" />
     <Content Include="Content\albertos - placehold\css\jquery.easy-pie-chart.css" />
     <Content Include="Content\albertos - placehold\css\media.css" />
     <Content Include="Content\albertos - placehold\css\owl.carousel.css" />
@@ -207,6 +224,8 @@
     <Content Include="Content\albertos - placehold\css\simple-line-icons.css" />
     <Content Include="Content\albertos - placehold\css\style.css" />
     <Content Include="Content\albertos - placehold\images\bg-menu.jpg" />
+    <Content Include="Content\albertos - placehold\images\cart.jpg" />
+    <Content Include="Content\albertos - placehold\images\cart.png" />
     <Content Include="Content\albertos - placehold\images\favicon.ico" />
     <Content Include="Content\albertos - placehold\images\frame.png" />
     <Content Include="Content\albertos - placehold\images\inner-shadow.png" />
@@ -257,7 +276,10 @@
     <Content Include="Content\albertos - placehold\rs-slider\css\closedhand.cur" />
     <Content Include="Content\albertos - placehold\rs-slider\css\openhand.cur" />
     <Content Include="Content\albertos - placehold\rs-slider\css\settings.css" />
+    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.eot" />
     <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.svg" />
+    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.ttf" />
+    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.woff" />
     <Content Include="Content\albertos - placehold\rs-slider\js\jquery.themepunch.revolution.min.js" />
     <Content Include="Content\albertos - placehold\rs-slider\js\jquery.themepunch.tools.min.js" />
     <Content Include="Content\albertos - placehold\upload\alhoOleo.jpg" />
@@ -288,16 +310,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CarrinhoController.cs" />
     <Compile Include="Controllers\ContatoController.cs" />
     <Compile Include="Controllers\FuncionarioAddController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\PizzasController.cs" />
-    <Compile Include="Controllers\ProdutoAddController.cs" />
+    <Compile Include="Controllers\SaboresAddController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
+    <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="DAO\PizzariaContext.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="Filters\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -322,12 +347,18 @@
     <Compile Include="Migrations\20180914194339_Refrigerante.designer.cs">
       <DependentUpon>20180914194339_Refrigerante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180924143423_Alterações.cs" />
+    <Compile Include="Migrations\20180924143423_Alterações.designer.cs">
+      <DependentUpon>20180924143423_Alterações.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\FormaDePagamento.cs" />
     <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\ItemRefri.cs" />
+    <Compile Include="Models\ItemSabor.cs" />
     <Compile Include="Models\ItensPedido.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Pessoa.cs" />
@@ -337,26 +368,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.ttf" />
-    <Content Include="Content\albertos - placehold\css\fonts\Flaticon.woff" />
-    <Content Include="Content\albertos - placehold\css\fonts\Flaticond41d.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.ttf" />
-    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.woff" />
-    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfont5b62.woff2" />
-    <Content Include="Content\albertos - placehold\css\fonts\fontawesome-webfontd41d.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.ttf" />
-    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-strokebb1d.woff" />
-    <Content Include="Content\albertos - placehold\css\fonts\Pe-icon-7-stroked41d.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.eot" />
-    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.ttf" />
-    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Icons.woff" />
-    <Content Include="Content\albertos - placehold\css\fonts\Simple-Line-Iconsd41d.eot" />
-    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.eot" />
-    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.ttf" />
-    <Content Include="Content\albertos - placehold\rs-slider\fonts\revicons\revicons90c6.woff" />
     <None Include="packages.config" />
     <Content Include="Views\Pessoa\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -369,8 +380,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Sobre\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\ProdutoAdd\Index.cshtml" />
+    <Content Include="Views\SaboresAdd\Index.cshtml" />
     <Content Include="Views\FuncionarioAdd\Index.cshtml" />
+    <Content Include="Views\Carrinho\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
