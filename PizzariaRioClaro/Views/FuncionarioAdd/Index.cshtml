@@ -1,75 +1,71 @@
 ﻿
-@{
-    Layout = null;
-}
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+<div id="container" style="left:300px;">
+    <form class="form-horizontal" action="/FuncionarioAdd/Adiciona" method="post">
+        <fieldset>
+            <br /><br />
+            <!-- Form Name -->
+            <legend>Cadastro de Funcionários</legend>
+            <!-- Text input-->
 
-<form class="form-horizontal" action="/FuncionarioAdd/Adiciona" method="post">
-    <fieldset>
-        <br /><br />
-        <!-- Form Name -->
-        <legend>Cadastro de Funcionários</legend>
-        <!-- Text input-->
+            <input name="pessoa.TipoDePessoa" value="F" hidden />
 
-        <input name="pessoa.TipoDePessoa" value="F" hidden />
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtcodigo_produto_id">Nome Completo : </label>
+                <div class="col-md-5">
+                    <input id="nomecompleto" name="pessoa.NomeCompleto" type="text" placeholder="Insira seu nome completo" class="form-control input-md" value="@ViewBag.Pessoa.NomeCompleto" required>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtcodigo_produto_id">Nome Completo : </label>
-            <div class="col-md-3">
-                <input id="nomecompleto" name="pessoa.NomeCompleto" type="text" placeholder="Insira seu nome" class="form-control input-md" value="@ViewBag.Pessoa.NomeCompleto" required>
-
+                </div>
             </div>
-        </div>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtproduto">Data de Nascimento : </label>
-            <div class="col-md-2">
-                <input id="data" name="pessoa.DataDeNascimento" type="date" class="form-control input-md" value="@ViewBag.Pessoa.DataDeNascimento" required>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtproduto">Data de Nascimento : </label>
+                <div class="col-md-4">
+                    <input id="data" name="pessoa.DataDeNascimento" type="date" class="form-control input-md" value="@ViewBag.Pessoa.DataDeNascimento" required>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtcodigo_produto_id">CPF : </label>
-            <div class="col-md-3">
-                <input id="cpf" name="pessoa.Cpf" type="text" placeholder="Insira seu nome" class="form-control input-md" value="@ViewBag.Pessoa.Cpf" required>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtcodigo_produto_id">CPF : </label>
+                <div class="col-md-5">
+                    <input id="cpf" name="pessoa.Cpf" type="text" placeholder="Insira seu CPF" class="form-control input-md" value="@ViewBag.Pessoa.Cpf" required>
 
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtcodigo_produto_id">Telefone : </label>
-            <div class="col-md-3">
-                <input id="cpf" name="pessoa.Telefone" type="text" placeholder="Insira seu nome" class="form-control input-md" value="@ViewBag.Pessoa.Telefone" required>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtcodigo_produto_id">Telefone : </label>
+                <div class="col-md-5">
+                    <input id="cpf" name="pessoa.Telefone" type="text" placeholder="Insira seu telefone" class="form-control input-md" value="@ViewBag.Pessoa.Telefone" required>
 
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtproduto">Email : </label>
-            <div class="col-md-3">
-                <input id="txtproduto" name="pessoa.Email" type="email" placeholder="Insira seu email" class="form-control input-md" value="@ViewBag.Pessoa.Email" required="">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtproduto">Email : </label>
+                <div class="col-md-5">
+                    <input id="txtproduto" name="pessoa.Email" type="email" placeholder="Insira seu email" class="form-control input-md" value="@ViewBag.Pessoa.Email" required="">
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="txtproduto">Senha : </label>
-            <div class="col-md-3">
-                <input id="txtproduto" name="pessoa.Senha" type="password" placeholder="******" class="form-control input-md" value="@ViewBag.Pessoa.Senha" required="">
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="txtproduto">Senha : </label>
+                <div class="col-md-5">
+                    <input id="txtproduto" name="pessoa.Senha" type="password" placeholder="******" class="form-control input-md" value="@ViewBag.Pessoa.Senha" required="">
+                </div>
             </div>
-        </div>
 
-        <!-- Select Basic -->
-        <!-- Text input-->
-        <!-- Button (Double) -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="btnsalvar"></label>
-            <div class="col-md-8">
-                <input type="submit" class="btn btn-primary" value="Adicionar" />
-                <a href="/Admin/" class="btn btn-danger">Cancelar</a>
+            <!-- Select Basic -->
+            <!-- Text input-->
+            <!-- Button (Double) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnsalvar"></label>
+                <div class="col-md-8">
+                    <input type="submit" class="btn btn-primary" value="Adicionar" />
+                    <a href="/Admin/" class="btn btn-danger">Cancelar</a>
+                </div>
             </div>
-        </div>
-    </fieldset>
-</form>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
+        </fieldset>
+    </form>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</div>

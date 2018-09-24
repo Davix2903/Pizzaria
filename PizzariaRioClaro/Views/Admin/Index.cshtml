@@ -1,27 +1,20 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<title>Pizzaria Rio Claro</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-<!DOCTYPE html>
+<div id="container" style="left:350px;">
+    <a href="/SaborOuRefri/" class="btn btn-primary" style="">Cadastrar Produtos</a>
+    <hr />
+    <br />
 
-<html>
-<head>
-    <style>
-    </style>
-</head>
-<br />
+    <a href="/FuncionarioAdd/" class="btn btn-primary">Cadastrar Funcionário</a>
+    <hr />
+    <br />
 
-<a href="SaboresAdd/" class="">Cadastrar Produto</a>
-<hr />
-<br />
+    <a href="/Home/" class="btn btn-danger">Menu Principal</a>
 
-<a href="/FuncionarioAdd/" class="">Cadastrar Funcionario</a>
-<hr />
-<br />
-
-<a href="/Home/" class="btn btn-danger">Menu Principal</a>
-
-
-</html>
+</div>

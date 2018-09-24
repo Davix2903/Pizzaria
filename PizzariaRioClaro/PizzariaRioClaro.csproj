@@ -290,9 +290,11 @@
     <Content Include="Content\albertos - placehold\upload\chocolateBranco.jpg" />
     <Content Include="Content\albertos - placehold\upload\cincoQueijos.jpg" />
     <Content Include="Content\albertos - placehold\upload\frango_miniatura.jpg" />
+    <Content Include="Content\albertos - placehold\upload\HomeA.jpg" />
+    <Content Include="Content\albertos - placehold\upload\HomeB.jpg" />
+    <Content Include="Content\albertos - placehold\upload\HomeC.jpg" />
     <Content Include="Content\albertos - placehold\upload\marguerita.jpg" />
     <Content Include="Content\albertos - placehold\upload\mussarela.jpg" />
-    <Content Include="Content\albertos - placehold\upload\mussarelaHome.jpg" />
     <Content Include="Content\albertos - placehold\upload\napolitana.jpg" />
     <Content Include="Content\albertos - placehold\upload\negresco.jpg" />
     <Content Include="Content\albertos - placehold\upload\portuguesa.jpg" />
@@ -317,7 +319,9 @@
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\PizzasController.cs" />
+    <Compile Include="Controllers\RefrigeranteController.cs" />
     <Compile Include="Controllers\SaboresAddController.cs" />
+    <Compile Include="Controllers\SaborOuRefriController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
@@ -383,6 +387,8 @@
     <Content Include="Views\SaboresAdd\Index.cshtml" />
     <Content Include="Views\FuncionarioAdd\Index.cshtml" />
     <Content Include="Views\Carrinho\Index.cshtml" />
+    <Content Include="Views\SaborOuRefri\Index.cshtml" />
+    <Content Include="Views\Refrigerante\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
