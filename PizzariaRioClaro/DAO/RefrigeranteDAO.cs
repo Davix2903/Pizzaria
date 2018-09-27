@@ -7,38 +7,38 @@ using System.Web;
 
 namespace PizzariaRioClaro.DAO
 {
-    public class ProdutoDAO
+    public class RefrigeranteDAO
     {
-        public void Adiciona(Sabores sabores)
+        public void Adiciona(Refrigerante refrigerante)
         {
             using (var context = new PizzariaContext())
             {
-                context.Sabores.Add(sabores);
+                context.Refrigerantes.Add(refrigerante);
                 context.SaveChanges();
             }
         }
 
-        public IList<Sabores> Lista()
+        public IList<Refrigerante> Lista()
         {
             using (var contexto = new PizzariaContext())
             {
-                return contexto.Sabores.ToList();
+                return contexto.Refrigerantes.ToList();
             }
         }
 
-        public Sabores BuscaPorId(int id)
+        public Refrigerante BuscaPorId(int id)
         {
             using (var contexto = new PizzariaContext())
             {
-                return contexto.Sabores.Find(id);
+                return contexto.Refrigerantes.Find(id);
             }
         }
 
-        public void Atualiza(Sabores sabores)
+        public void Atualiza(Refrigerante refrigerante)
         {
             using (var contexto = new PizzariaContext())
             {
-                contexto.Entry(sabores).State = EntityState.Modified;
+                contexto.Entry(refrigerante).State = EntityState.Modified;
                 contexto.SaveChanges();
             }
         }

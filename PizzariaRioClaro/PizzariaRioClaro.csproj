@@ -187,11 +187,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="a5b48d85873950d424673a030a408beb.jpg" />
     <Content Include="Content\albertos - placehold\about.html" />
     <Content Include="Content\albertos - placehold\blog.html" />
     <Content Include="Content\albertos - placehold\contact.html" />
     <Content Include="Content\albertos - placehold\css\animsition.css" />
     <Content Include="Content\albertos - placehold\css\custom_script.css" />
+    <Content Include="Content\albertos - placehold\css\estiloProjeto.css" />
     <Content Include="Content\albertos - placehold\css\flaticon.css" />
     <Content Include="Content\albertos - placehold\css\font-awesome.css" />
     <Content Include="Content\albertos - placehold\css\fonts\Flaticon.eot" />
@@ -223,6 +225,7 @@
     <Content Include="Content\albertos - placehold\css\pe-icon-7-stroke.css" />
     <Content Include="Content\albertos - placehold\css\simple-line-icons.css" />
     <Content Include="Content\albertos - placehold\css\style.css" />
+    <Content Include="Content\albertos - placehold\images\269.jpg" />
     <Content Include="Content\albertos - placehold\images\bg-menu.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.png" />
@@ -232,6 +235,8 @@
     <Content Include="Content\albertos - placehold\images\logo-retina %282%29.png" />
     <Content Include="Content\albertos - placehold\images\logo-retina.png" />
     <Content Include="Content\albertos - placehold\images\logo.png" />
+    <Content Include="Content\albertos - placehold\images\pizza.png" />
+    <Content Include="Content\albertos - placehold\images\refrigerante.png" />
     <Content Include="Content\albertos - placehold\images\shadow-frame.png" />
     <Content Include="Content\albertos - placehold\index.html" />
     <Content Include="Content\albertos - placehold\js\contact-form.js" />
@@ -309,24 +314,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CarrinhoController.cs" />
-    <Compile Include="Controllers\ContatoController.cs" />
     <Compile Include="Controllers\FuncionarioAddController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
-    <Compile Include="Controllers\PizzasController.cs" />
-    <Compile Include="Controllers\RefrigeranteController.cs" />
+    <Compile Include="Controllers\RefrigeranteAddController.cs" />
     <Compile Include="Controllers\SaboresAddController.cs" />
     <Compile Include="Controllers\SaborOuRefriController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="DAO\PizzariaContext.cs" />
-    <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="DAO\RefrigeranteDAO.cs" />
+    <Compile Include="DAO\SaboresDAO.cs" />
     <Compile Include="Filters\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -354,6 +359,10 @@
     <Compile Include="Migrations\20180924143423_Alterações.cs" />
     <Compile Include="Migrations\20180924143423_Alterações.designer.cs">
       <DependentUpon>20180924143423_Alterações.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180924200421_Models.cs" />
+    <Compile Include="Migrations\20180924200421_Models.Designer.cs">
+      <DependentUpon>20180924200421_Models.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
@@ -389,6 +398,7 @@
     <Content Include="Views\Carrinho\Index.cshtml" />
     <Content Include="Views\SaborOuRefri\Index.cshtml" />
     <Content Include="Views\Refrigerante\Index.cshtml" />
+    <Content Include="Views\RefrigeranteAdd\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

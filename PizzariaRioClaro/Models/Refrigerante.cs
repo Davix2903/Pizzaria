@@ -15,5 +15,8 @@ namespace PizzariaRioClaro.Models
 
         [Required]
         public string Tamanho { get; set; }
+
+        [Required]
+        public double Preco { get; set; }
     }
 }

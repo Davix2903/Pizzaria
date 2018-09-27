@@ -1,8 +1,47 @@
 ﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed" />
+<link rel="stylesheet" href="~/Content/albertos - placehold/css/estiloProjeto.css" />
 
-<h2>Index</h2>
+<div >
+    <div style="left: 700px; margin-top: 100px;">
+        <form class="form-horizontal" action="/RefrigeranteAdd/Adiciona" method="post">
+            <fieldset>
+                <!-- Form Name -->
+                <h1 class="openSans"><strong>Cadastro de Refrigerante</strong></h1> <hr />
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label openSans" for="txtproduto">Marca : </label>
+                    <div class="col-md-6">
+                        <input id="marca" name="refrigerante.Marca" type="text" placeholder="Marca do Refrigerante" class="form-control input-md" required value="@ViewBag.Refrigerante.Marca">
 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label openSans" for="txtproduto">Tamanho (ml) : </label>
+                    <div class="col-md-6">
+                        <input id="tamanho" name="refrigerante.Tamanho" type="text" placeholder="Conteúdo (ml)" class="form-control input-md" required value="@ViewBag.Refrigerante.Tamanho">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label openSans" for="txtproduto">Preço : </label>
+                    <div class="col-md-6">
+                        <input id="preco" name="refrigerante.Preco" type="number" placeholder="Preco" class="form-control input-md" required value="@ViewBag.Refrigerante.Preco">
+
+                    </div>
+                </div>
+                <!-- Button (Double) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="btnsalvar"></label>
+                    <div class="col-md-8">
+                        <input type="submit" class="btn btn-primary openSans" value="Adicionar" />
+                        <a href="/SaborOuRefri/" class="btn btn-danger openSans">Cancelar</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

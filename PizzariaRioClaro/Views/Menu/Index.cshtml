@@ -16,28 +16,63 @@
         <div class="page-wrapper">
             <div class="offer-menu-wrapper">
 
-                        @foreach (var sabor in ViewBag.Sabores)
-                        {
-                            <div class="single-offer-item">
-                                <div class="single-offer-details">
-                                    <div class="single-offer-title">@sabor.Sabor</div>
-                                    <div class="single-offer-content">@sabor.Ingredientes</div>
-                                </div>
-                                <div class="single-offer-price">$@sabor.Preco</div>
-                                <div class="clear"></div>
-                                <br />
-                                <a>Adicionar ao carrinho</a>
-                                <hr />
-                            </div>
-                        }
-
+                @foreach (var sabor in ViewBag.Sabores)
+                {
+                    <div class="single-offer-item">
+                        <div class="single-offer-details">
+                            <div class="single-offer-title">@sabor.Sabor</div>
+                            <div class="single-offer-content">@sabor.Ingredientes</div>
+                        </div>
+                        <div class="single-offer-price">$@sabor.Preco</div>
+                        <div class="clear"></div>
+                        <br />
+                        <a>Adicionar ao carrinho</a>
+                        <hr />
                     </div>
-                </div>
+                }
             </div>
         </div>
     </div>
-    <!-- end page wrapper -->
 </div>
-<!-- end container -->
 <div class="clear"></div>
-<!-- end container-wrapper -->
+
+<!----->
+
+<div class="container-wrapper">
+    <div class="page-bg" style=" background-image: url(upload/bg-pizza.jpg); "></div>
+    <div id="container">
+        <!-- start container -->
+        <div class="page-title-wrapper">
+            <div class="page-title-outher">
+                <div class="page-title-inner">
+                    <span class="page-title-icon flaticon-pizza-slice"></span>
+                    <h1 class="page-title">Refrigerantes</h1>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="page-wrapper">
+            <div class="offer-menu-wrapper">
+
+                @foreach (var refrigerante in ViewBag.Refrigerantes)
+                {
+                    <div class="single-offer-item">
+                        <div class="single-offer-details">
+                            <div class="single-offer-title">@refrigerante.Marca</div>
+                            <div class="single-offer-content">@refrigerante.Tamanho Ml</div>
+                        </div>
+                        <div class="single-offer-price">$@refrigerante.Preco</div>
+                        <div class="clear"></div>
+                        <br />
+                        <a>Adicionar ao carrinho</a>
+                        <hr />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+

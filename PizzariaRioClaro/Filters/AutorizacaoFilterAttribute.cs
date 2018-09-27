@@ -11,9 +11,12 @@ namespace PizzariaRioClaro.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
+            bool login = filterContext.ActionDescriptor.ActionName == "Login";
+            bool autentica = filterContext.ActionDescriptor.ActionName == "Autentica";
+
             object usuario = filterContext.HttpContext.Session["PessoaLogada"];
 
-            if (usuario == null)
+            if (usuario == null && !login && !autentica)
             {
                 filterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary(

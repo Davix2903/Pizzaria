@@ -1,4 +1,5 @@
 ﻿using PizzariaRioClaro.DAO;
+using PizzariaRioClaro.Filters;
 using PizzariaRioClaro.Models;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace PizzariaRioClaro.Controllers
 {
     public class FuncionarioAddController : Controller
     {
+        [AutorizacaoFilter]
         // GET: FuncionarioAdd
         public ActionResult Index()
         {

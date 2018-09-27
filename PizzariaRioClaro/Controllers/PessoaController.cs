@@ -1,4 +1,5 @@
 ﻿using PizzariaRioClaro.DAO;
+using PizzariaRioClaro.Filters;
 using PizzariaRioClaro.Models;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,19 @@ namespace PizzariaRioClaro.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            Session["PessoaLogada"] = null;
+            return RedirectToAction("Login", "Pessoa");
+        }
+
         public ActionResult Autentica(string login, string senha)
         {
             PessoaDAO dao = new PessoaDAO();
             Pessoa pessoa = dao.Busca(login, senha);
             if (pessoa != null)
             {
-                Session["PessoaLogada"] = pessoa;
+                HttpContext.Session["PessoaLogada"] = pessoa;
                 return RedirectToAction("Index", "Home");
 
             }
