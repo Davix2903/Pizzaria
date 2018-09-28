@@ -8,7 +8,6 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    [AutorizacaoFilter]
     public class MenuController : Controller
     {
         // GET: Menu
@@ -18,6 +17,8 @@ namespace PizzariaRioClaro.Controllers
             ViewBag.Sabores = dao.Lista();
             RefrigeranteDAO rdao = new RefrigeranteDAO();
             ViewBag.Refrigerantes = rdao.Lista();
+            SaboresDoceDAO ddao = new SaboresDoceDAO();
+            ViewBag.SaboresDoce = ddao.Lista();
             return View();
         }
     }

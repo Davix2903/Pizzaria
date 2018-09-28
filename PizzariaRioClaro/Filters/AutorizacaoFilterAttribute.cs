@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzariaRioClaro.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,16 +10,19 @@ namespace PizzariaRioClaro.Filters
 {
     public class AutorizacaoFilterAttribute : ActionFilterAttribute
     {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
+        public override void OnActionExecuting(ActionExecutingContext FilterContext)
         {
-            bool login = filterContext.ActionDescriptor.ActionName == "Login";
-            bool autentica = filterContext.ActionDescriptor.ActionName == "Autentica";
+            if (FilterContext.Controller.GetType() == typeof(PessoaController))
+                return;
+            bool pessoa = FilterContext.ActionDescriptor.ControllerDescriptor.ControllerName == "Pessoa";
+            bool autentica = FilterContext.ActionDescriptor.ActionName == "Autentica";
+            bool login = FilterContext.ActionDescriptor.ActionName == "Login";
 
-            object usuario = filterContext.HttpContext.Session["PessoaLogada"];
+            object usuario = FilterContext.HttpContext.Session["pessoalogada"];
 
-            if (usuario == null && !login && !autentica)
+            if (usuario == null && !(pessoa && login) && !(pessoa && autentica))
             {
-                filterContext.Result = new RedirectToRouteResult(
+                FilterContext.Result = new RedirectToRouteResult(
                     new RouteValueDictionary(
                         new { controller = "Pessoa", action = "Login" }
                         )

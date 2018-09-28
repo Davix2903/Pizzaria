@@ -7,7 +7,6 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    [AutorizacaoFilter]
     public class SaborOuRefriController : Controller
     {
         // GET: SaborOuRefri

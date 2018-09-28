@@ -225,7 +225,6 @@
     <Content Include="Content\albertos - placehold\css\pe-icon-7-stroke.css" />
     <Content Include="Content\albertos - placehold\css\simple-line-icons.css" />
     <Content Include="Content\albertos - placehold\css\style.css" />
-    <Content Include="Content\albertos - placehold\images\269.jpg" />
     <Content Include="Content\albertos - placehold\images\bg-menu.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.png" />
@@ -238,6 +237,7 @@
     <Content Include="Content\albertos - placehold\images\pizza.png" />
     <Content Include="Content\albertos - placehold\images\refrigerante.png" />
     <Content Include="Content\albertos - placehold\images\shadow-frame.png" />
+    <Content Include="Content\albertos - placehold\images\wallpaperpizzaria.jpg" />
     <Content Include="Content\albertos - placehold\index.html" />
     <Content Include="Content\albertos - placehold\js\contact-form.js" />
     <Content Include="Content\albertos - placehold\js\custom-inline-js.js" />
@@ -306,6 +306,16 @@
     <Content Include="Content\albertos - placehold\upload\sensacao.jpg" />
     <Content Include="Content\albertos - placehold\upload\sensacaoHome.jpg" />
     <Content Include="Content\albertos - placehold\upload\vegetariana.jpg" />
+    <Content Include="Content\dist\css\bootstrap-grid.css" />
+    <Content Include="Content\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Content\dist\css\bootstrap-reboot.css" />
+    <Content Include="Content\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\dist\css\bootstrap.css" />
+    <Content Include="Content\dist\css\bootstrap.min.css" />
+    <Content Include="Content\dist\js\bootstrap.bundle.js" />
+    <Content Include="Content\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\dist\js\bootstrap.js" />
+    <Content Include="Content\dist\js\bootstrap.min.js" />
     <Content Include="Content\TelaLogin\logo.png" />
     <Content Include="Content\TelaLogin\pizza.png" />
     <Content Include="Content\TelaLogin\Style.css" />
@@ -325,6 +335,7 @@
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\RefrigeranteAddController.cs" />
     <Compile Include="Controllers\SaboresAddController.cs" />
+    <Compile Include="Controllers\SaboresDoceAddController.cs" />
     <Compile Include="Controllers\SaborOuRefriController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
@@ -332,6 +343,7 @@
     <Compile Include="DAO\PizzariaContext.cs" />
     <Compile Include="DAO\RefrigeranteDAO.cs" />
     <Compile Include="DAO\SaboresDAO.cs" />
+    <Compile Include="DAO\SaboresDoceDAO.cs" />
     <Compile Include="Filters\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -364,6 +376,10 @@
     <Compile Include="Migrations\20180924200421_Models.Designer.cs">
       <DependentUpon>20180924200421_Models.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20180928142743_SaboresDoce.cs" />
+    <Compile Include="Migrations\20180928142743_SaboresDoce.designer.cs">
+      <DependentUpon>20180928142743_SaboresDoce.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Compra.cs" />
@@ -377,10 +393,21 @@
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Refrigerante.cs" />
     <Compile Include="Models\Sabores.cs" />
+    <Compile Include="Models\SaboresDoce.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Content\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Content\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\dist\css\bootstrap.css.map" />
+    <Content Include="Content\dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\dist\js\bootstrap.js.map" />
+    <Content Include="Content\dist\js\bootstrap.min.js.map" />
     <None Include="packages.config" />
     <Content Include="Views\Pessoa\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -399,6 +426,7 @@
     <Content Include="Views\SaborOuRefri\Index.cshtml" />
     <Content Include="Views\Refrigerante\Index.cshtml" />
     <Content Include="Views\RefrigeranteAdd\Index.cshtml" />
+    <Content Include="Views\SaboresDoceAdd\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

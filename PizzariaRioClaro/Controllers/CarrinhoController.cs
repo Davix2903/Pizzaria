@@ -1,4 +1,5 @@
-﻿using PizzariaRioClaro.Filters;
+﻿using PizzariaRioClaro.DAO;
+using PizzariaRioClaro.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,6 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    [AutorizacaoFilter]
     public class CarrinhoController : Controller
     {
         // GET: Carrinho

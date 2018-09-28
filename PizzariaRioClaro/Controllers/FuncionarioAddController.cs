@@ -11,7 +11,6 @@ namespace PizzariaRioClaro.Controllers
 {
     public class FuncionarioAddController : Controller
     {
-        [AutorizacaoFilter]
         // GET: FuncionarioAdd
         public ActionResult Index()
         {

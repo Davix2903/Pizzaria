@@ -8,6 +8,7 @@ namespace PizzariaRioClaro.Models
     public class Pedido
     {
         public int Id { get; set; }
-        public ItensPedido ItensPedido { get; set; }
+        public string Status { get; set; }
+        public Pessoa Usuario { get; set; }
     }
 }

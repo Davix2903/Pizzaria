@@ -50,5 +50,26 @@ namespace PizzariaRioClaro.DAO
                 return contexto.Pessoas.Where(p => p.Email == login && p.Senha == senha).FirstOrDefault();
             }
         }
+
+        public Pessoa Teste()
+        {/*
+            using (var contexto = new PizzariaContext())
+            {
+                var pessoa = Session["PessoaLogada"] as Pessoa;
+                var p2 = contexto.Pessoas.FirstOrDefault(p => p.NomeCompleto == "Pendente" && p.Id == 1); //pedido
+                var ps = contexto.Enderecos.Where(p => p.Pessoa == p2).ToArray(); //itens do pedido
+                //Enderecos = itensPedido & Pessoa = Pedido
+                foreach (var item in ps)
+                {
+
+                }
+            }*/
+            return null;
+        }
+
+        private int usuarioLogado()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace PizzariaRioClaro.DAO
         public DbSet<Pessoa> Pessoas { get; set; }
         public DbSet<Sabores> Sabores { get; set; }
         public DbSet<Refrigerante> Refrigerantes { get; set; }
+        public DbSet<SaboresDoce> SaboresDoce { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

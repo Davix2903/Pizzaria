@@ -9,7 +9,6 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    [AutorizacaoFilter]
     public class RefrigeranteAddController : Controller
     {
         // GET: Refrigerante

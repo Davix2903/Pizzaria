@@ -1,5 +1,4 @@
 ﻿using PizzariaRioClaro.DAO;
-using PizzariaRioClaro.Filters;
 using PizzariaRioClaro.Models;
 using System;
 using System.Collections.Generic;
@@ -9,22 +8,23 @@ using System.Web.Mvc;
 
 namespace PizzariaRioClaro.Controllers
 {
-    public class SaboresAddController : Controller
+    public class SaboresDoceAddController : Controller
     {
-        // GET: ProdutoAdd
+        // GET: SaboresDoceAdd
         public ActionResult Index()
         {
-            ViewBag.Sabores = new Sabores();
+            ViewBag.SaboresDoce = new SaboresDoce();       
             return View();
         }
 
+
         [HttpPost]
-        public ActionResult Adiciona(Sabores sabores)
+        public ActionResult Adiciona(SaboresDoce saboresDoce)
         {
-            SaboresDAO dao = new SaboresDAO();
-            if (sabores != null)
+            SaboresDoceDAO dao = new SaboresDoceDAO();
+            if (saboresDoce != null)
             {
-                dao.Adiciona(sabores);
+                dao.Adiciona(saboresDoce);
                 return RedirectToAction("Index", "Home");
             }
             else

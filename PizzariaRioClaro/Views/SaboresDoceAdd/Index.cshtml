@@ -4,15 +4,15 @@
 
 <div style="left: 700px; margin-top: 100px;">
 
-    <form class="form-horizontal" action="/SaboresAdd/Adiciona" method="post">
+    <form class="form-horizontal" action="/SaboresDoceAdd/Adiciona" method="post">
         <fieldset>
             <!-- Form Name -->
-            <h1 class="openSans"><strong>Cadastro de Sabores Salgados</strong> </h1> <hr />
+            <h1 class="openSans"><strong>Cadastro de Sabores Doce</strong> </h1> <hr />
 
             <div class="form-group">
-                <label class="col-md-4 control-label openSans" for="txtproduto">Sabor : </label>
+                <label class="col-md-4 control-label openSans" for="txtproduto">Sabor Doce : </label>
                 <div class="col-md-6">
-                    <input id="sabor" name="sabores.Sabor" type="text" placeholder="Descrição do Produto" class="form-control input-md" required value="@ViewBag.Sabores.Sabor">
+                    <input id="sabor" name="saboresDoce.Sabor" type="text" placeholder="Descrição do Sabor " class="form-control input-md" required value="@ViewBag.SaboresDoce.Sabor">
 
                 </div>
             </div>
@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label openSans" for="txtproduto">Ingredientes : </label>
                 <div class="col-md-6">
-                    <input id="ingredientes" name="sabores.Ingredientes" type="text" placeholder="Ingredientes" class="form-control input-md" required value="@ViewBag.Sabores.Ingredientes">
+                    <input id="ingredientes" name="saboresDoce.Ingredientes" type="text" placeholder="Ingredientes" class="form-control input-md" required value="@ViewBag.SaboresDoce.Ingredientes">
 
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label openSans" for="txtproduto">Preço : </label>
                 <div class="col-md-6">
-                    <input id="preco" name="sabores.Preco" type="number" placeholder="Preco" class="form-control input-md" required value="@ViewBag.Sabores.Preco">
+                    <input id="preco" name="saboresDoce.Preco" type="number" placeholder="Preco" class="form-control input-md" required value="@ViewBag.SaboresDoce.Preco">
 
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label openSans" for="txtgrupo">Tipo : </label>
                 <div class="col-md-4">
-                    <select id="tipo" name="sabores.TipoPizza" class="form-control">
+                    <select id="tipo" name="saboresDoce.TipoPizza" class="form-control">
                         <option value="S">Pizza Salgada</option>
                         <option value="D">Pizza Doce</option>
                     </select>

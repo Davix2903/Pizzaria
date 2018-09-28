@@ -1,30 +1,32 @@
-﻿@{
-    ViewBag.Title = "View";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<title>Pizzaria Rio Claro</title>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+﻿<link rel="stylesheet" href="~/Content/dist/css/bootstrap.css" />
 <link rel="stylesheet" href="~/Content/albertos - placehold/css/estiloProjeto.css" />
-<link rel="stylesheet" href="~/Content/albertos - placehold/images/"
 
-<div id="container" style="left:700px; margin-top: 200px;">
-   
-    <a href="/SaborOuRefri/" class="btn btn-primary openSans" style="width: 350px; height: 60px;">
-        <img src="https://png.icons8.com/office/40/c0392b/open-box.png" /> Cadastrar Produtos
-    </a>
-    <br />
-    <br />
-
-    <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;">
-        <img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png"> Cadastrar Funcionário
-    </a>
-
-    <br />
-    <br />
-
-    <a href="/Home/" class="btn btn-danger openSans" style="width: 350px; height: 60px;">
-        <img src="https://png.icons8.com/linen/40/c0392b/delete-sign.png"> Menu Principal
-    </a>
-
+<div>
+    <form>
+        <div class="row">
+            <div class="col w-25"></div>
+            <div class="col w-50" style="margin-top: 150px;">
+                <a href="/SaborOuRefri/" class="btn btn-primary openSans" style="width: 350px; height: 60px;"><img src="https://png.icons8.com/office/40/c0392b/open-box.png" /> Cadastrar Produtos</a>
+                <br />
+                <br />
+            </div>
+            <div class="col w-25"></div>
+        </div>
+        <div class="row">
+            <div class="col w-25"></div>
+            <div class="col w-50">
+                <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;"><img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png"> Cadastrar Funcionário</a>
+                <br />
+                <br />
+            </div>
+            <div class="col w-25"></div>
+        </div>
+        <div class="row">
+            <div class="col w-25"></div>
+            <div class="col w-50">
+                <a href="/Home/" class="btn btn-danger openSans" style="width: 350px; height: 60px;"> <img src="https://png.icons8.com/linen/40/c0392b/delete-sign.png"> Menu Principal </a>
+            </div>
+            <div class="col w-25"></div>
+        </div>
+    </form>
 </div>
