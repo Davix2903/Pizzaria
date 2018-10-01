@@ -223,6 +223,7 @@
     <Content Include="Content\albertos - placehold\css\owl.transitions.css" />
     <Content Include="Content\albertos - placehold\css\owl.video.play.html" />
     <Content Include="Content\albertos - placehold\css\pe-icon-7-stroke.css" />
+    <Content Include="Content\albertos - placehold\css\pizza.png" />
     <Content Include="Content\albertos - placehold\css\simple-line-icons.css" />
     <Content Include="Content\albertos - placehold\css\style.css" />
     <Content Include="Content\albertos - placehold\images\bg-menu.jpg" />
@@ -332,6 +333,7 @@
     <Compile Include="Controllers\FuncionarioAddController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\RefrigeranteAddController.cs" />
     <Compile Include="Controllers\SaboresAddController.cs" />
@@ -339,6 +341,7 @@
     <Compile Include="Controllers\SaborOuRefriController.cs" />
     <Compile Include="Controllers\SobreController.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
+    <Compile Include="DAO\PedidoDAO.cs" />
     <Compile Include="DAO\PessoaDAO.cs" />
     <Compile Include="DAO\PizzariaContext.cs" />
     <Compile Include="DAO\RefrigeranteDAO.cs" />
@@ -380,14 +383,22 @@
     <Compile Include="Migrations\20180928142743_SaboresDoce.designer.cs">
       <DependentUpon>20180928142743_SaboresDoce.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20181001004157_Carrinho.cs" />
+    <Compile Include="Migrations\20181001004157_Carrinho.designer.cs">
+      <DependentUpon>20181001004157_Carrinho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181001005726_itensPedidos.cs" />
+    <Compile Include="Migrations\20181001005726_itensPedidos.designer.cs">
+      <DependentUpon>20181001005726_itensPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181001185735_ItensPedido.cs" />
+    <Compile Include="Migrations\20181001185735_ItensPedido.designer.cs">
+      <DependentUpon>20181001185735_ItensPedido.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Compra.cs" />
     <Compile Include="Models\Endereco.cs" />
-    <Compile Include="Models\FormaDePagamento.cs" />
     <Compile Include="Models\Funcionario.cs" />
-    <Compile Include="Models\ItemRefri.cs" />
-    <Compile Include="Models\ItemSabor.cs" />
     <Compile Include="Models\ItensPedido.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Pessoa.cs" />
@@ -413,9 +424,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Pessoa\Cadastro.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
-    <Content Include="Views\Contato\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
-    <Content Include="Views\Pizzas\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Sobre\Index.cshtml" />
@@ -424,7 +433,6 @@
     <Content Include="Views\FuncionarioAdd\Index.cshtml" />
     <Content Include="Views\Carrinho\Index.cshtml" />
     <Content Include="Views\SaborOuRefri\Index.cshtml" />
-    <Content Include="Views\Refrigerante\Index.cshtml" />
     <Content Include="Views\RefrigeranteAdd\Index.cshtml" />
     <Content Include="Views\SaboresDoceAdd\Index.cshtml" />
     <None Include="Web.Debug.config">
@@ -436,6 +444,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Pedidos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

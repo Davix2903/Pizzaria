@@ -3,15 +3,3 @@
     font-size: 16px;
     text-align: center;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    background: url(../images/269.jpg);
-    background-size: cover;
-    font-family: "Open Sans Condensed";
-}
-
-div {
-    background-image: url(wallpaperpizzaria.jpg);   
-}

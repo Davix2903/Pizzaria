@@ -1,4 +1,7 @@
-﻿<div class="container-wrapper">
+﻿@using PizzariaRioClaro.Models;
+
+
+<div class="container-wrapper">
     <div class="page-bg" style=" background-image: url(upload/bg-pizza.jpg); "></div>
     <div id="container">
         <!-- start container -->
@@ -26,11 +29,19 @@
                         <div class="single-offer-price">$@sabor.Preco</div>
                         <div class="clear"></div>
                         <br />
-                        <a class="addCarrinho" id="@=sabor.Id">Adicionar ao carrinho</a>
-        <hr />
+
+                        @if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa == 'C')
+                            {
+                                <a href="#" onclick="adiciona(@sabor.Id, 'S')">Adicionar ao carrinho</a>
+                            }
+                        }
+                        <hr />
 
 
-    </div>
+                    </div>
                 }
             </div>
         </div>
@@ -70,7 +81,14 @@
                         <div class="single-offer-price">$@refrigerante.Preco</div>
                         <div class="clear"></div>
                         <br />
-                        <a>Adicionar ao carrinho</a>
+                        @if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa == 'C')
+                            {
+                                <a href="#" onclick="adiciona(@refrigerante.Id, 'R')">Adicionar ao carrinho</a>
+                            }
+                        }
                         <hr />
                     </div>
                 }
@@ -112,7 +130,14 @@
                         <div class="single-offer-price">@sabor.Preco</div>
                         <div class="clear"></div>
                         <br />
-                        <a>Adicionar ao carrinho</a>
+                        @if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa == 'C')
+                            {
+                                <a href="#" onclick="adiciona(@sabor.Id, 'D')">Adicionar ao carrinho</a>
+                            }
+                        }
                         <hr />
                     </div>
                 }
@@ -122,3 +147,21 @@
 </div>
 <div class="clear"></div>
 
+@section scriptsMenu {
+    <script>
+        function adiciona(id, tipo) {
+            jQuery.ajax({
+                data: { tipo: tipo },
+                dataType: 'json',
+                url: '/Carrinho/Adiciona/' + id,
+                success: function (resposta) {
+                    if (resposta.adicionou) {
+                        alert("Sabor adicionado.");
+                    } else {
+                        alert(resposta.msg);
+                    }
+                }
+            });
+        }
+    </script>
+}

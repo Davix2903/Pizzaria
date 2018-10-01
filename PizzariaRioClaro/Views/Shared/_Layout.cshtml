@@ -42,7 +42,7 @@
     <div class="animsition global-wrapper">
         <div id="header" class="header-wrapper">
             <div class="logo">
-                <a href="index.html" title="Pizzaria Rio Claro">
+                <a href="index.html" title="Pizzaria Rio Claro"></a>
                     <img class="logoImage" src="~/Content/albertos - placehold/images/logo.png" alt="Pizzaria Rio Claro" />
                     <div class="clear"></div>
             </div>
@@ -53,7 +53,6 @@
                             <li class="menu-item"><a href="/Home">Home</a></li>
                             <li class="menu-item"><a href="/Menu">Menu</a></li>
                             <li class="menu-item"><a href="/Sobre">Sobre nós</a></li>
-                            <li class="menu-item"><a href="/Contato">Contato</a></li>
                             <li class="menu-item"><a href="/Blog">Blog</a></li>
                             @{
                                 if (Session["PessoaLogada"] as Pessoa != null)
@@ -71,11 +70,12 @@
                                     var pessoa = Session["PessoaLogada"] as Pessoa;
                                     if (pessoa.TipoDePessoa == 'C')
                                     {
-                                        <li class="menu-item"><a href="/Carrinho">Carrinho </a></li>
+                                        <li class="menu-item"><a href="/Carrinho">Carrinho <img src="https://png.icons8.com/material/18/ffffff/shopping-cart.png"></a></li>
                                     }
                                 }
                             }
-                            <br /> <hr />
+                            <br />
+                            <hr />
                             <li class="menu-item"><a href="@Url.Action("Logout", "Pessoa")">Log out</a></li>
                         </ul>
                     </div>
@@ -114,7 +114,6 @@
                     <li class="menu-item"><a href="~/Home">Home</a></li>
                     <li class="menu-item"><a href="~/Menu">Menu</a></li>
                     <li class="menu-item"><a href="~/Sobre">Sobre Nós</a></li>
-                    <li class="menu-item"><a href="~/Contato">Contato</a></li>
                     <li class="menu-item"><a href="~/Blog">Blog</a></li>
                     @{
                         if (Session["PessoaLogada"] as Pessoa != null)
@@ -123,6 +122,16 @@
                             if (pessoa.TipoDePessoa == 'F')
                             {
                                 <li class="menu-item"><a href="/Admin/Index">Admin</a></li>
+                            }
+                        }
+                    }
+                    @{
+                        if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa == 'C')
+                            {
+                                <li class="menu-item"><a href="/Carrinho">Carrinho </a></li>
                             }
                         }
                     }
@@ -323,5 +332,7 @@
             document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
         }
     </script>
+
+    @RenderSection("scriptsMenu", false)
 </body>
 </html>

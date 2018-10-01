@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzariaRioClaro.DAO;
 
 namespace PizzariaRioClaro.Migrations
 {
     [DbContext(typeof(PizzariaContext))]
-    partial class PizzariaContextModelSnapshot : ModelSnapshot
+    [Migration("20181001004157_Carrinho")]
+    partial class Carrinho
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,33 +44,6 @@ namespace PizzariaRioClaro.Migrations
                     b.HasIndex("PessoaId");
 
                     b.ToTable("Enderecos");
-                });
-
-            modelBuilder.Entity("PizzariaRioClaro.Models.ItensPedido", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("PedidoId");
-
-                    b.Property<int?>("RefrigeranteId");
-
-                    b.Property<int?>("SaboresDoceId");
-
-                    b.Property<int?>("SaboresId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PedidoId");
-
-                    b.HasIndex("RefrigeranteId");
-
-                    b.HasIndex("SaboresDoceId");
-
-                    b.HasIndex("SaboresId");
-
-                    b.ToTable("itensPedidos");
                 });
 
             modelBuilder.Entity("PizzariaRioClaro.Models.Pedido", b =>
@@ -186,25 +161,6 @@ namespace PizzariaRioClaro.Migrations
                     b.HasOne("PizzariaRioClaro.Models.Pessoa", "Pessoa")
                         .WithMany()
                         .HasForeignKey("PessoaId");
-                });
-
-            modelBuilder.Entity("PizzariaRioClaro.Models.ItensPedido", b =>
-                {
-                    b.HasOne("PizzariaRioClaro.Models.Pedido", "Pedido")
-                        .WithMany()
-                        .HasForeignKey("PedidoId");
-
-                    b.HasOne("PizzariaRioClaro.Models.Refrigerante", "Refrigerante")
-                        .WithMany()
-                        .HasForeignKey("RefrigeranteId");
-
-                    b.HasOne("PizzariaRioClaro.Models.SaboresDoce", "SaboresDoce")
-                        .WithMany()
-                        .HasForeignKey("SaboresDoceId");
-
-                    b.HasOne("PizzariaRioClaro.Models.Sabores", "Sabores")
-                        .WithMany()
-                        .HasForeignKey("SaboresId");
                 });
 
             modelBuilder.Entity("PizzariaRioClaro.Models.Pedido", b =>
