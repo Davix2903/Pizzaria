@@ -3,8 +3,7 @@
     }*@
 @model PizzariaRioClaro.Models.Pedido
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 <div class="container" style="left: 250px;">
     <div class="row">
@@ -53,7 +52,7 @@
                                                             <i class="glyphicon glyphicon-minus"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
                                                             <i class="glyphicon glyphicon-plus"></i>
@@ -61,11 +60,11 @@
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>@item.Sabores.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>@subtotal</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@item.Sabores.Preco</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <button type="button" class="btn btn-danger">
-                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                    <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -86,7 +85,7 @@
                                                             <i class="glyphicon glyphicon-minus"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
                                                             <i class="glyphicon glyphicon-plus"></i>
@@ -94,11 +93,11 @@
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>@item.SaboresDoce.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>@subtotal</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@item.SaboresDoce.Preco</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <button type="button" class="btn btn-danger">
-                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                    <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -116,22 +115,22 @@
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" min="0" step="1" ng-click="minus()">
-                                                            <i class="glyphicon glyphicon-minus"></i>
+                                                            <i class="glyphicon glyphicon-minus adicionarQuantidade"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
-                                                            <i class="glyphicon glyphicon-plus"></i>
+                                                            <i class="glyphicon glyphicon-plus removerQuantidade"></i>
                                                         </button>
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>@item.Refrigerante.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>@subtotal</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@item.Refrigerante.Preco</strong></td>
+                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <button type="button" class="btn btn-danger">
-                                                    <i class="glyphicon glyphicon-remove"></i>
+                                                    <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
                                         </tr>
@@ -143,19 +142,39 @@
                                 <td></td>
                                 <td></td>
                                 <td colspan="2" class="text-right"><h5>Total a pagar</h5></td>
-                                <td class="text-center"><h5><strong>@total</strong></h5></td>
+                                <td class="text-center"><h5><strong>$@total</strong></h5></td>
                                 <td></td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="row">
                         <div class="col text-center">
-                            <a href="/Home/" class="btn btn-danger">
-                                Menu Principal <span class="glyphicon glyphicon-remove"></span>
+                            <a href="/Menu/" class="btn btn-warning text-left" style="display: inline-block;">
+                                Continuar Comprando <span class="glyphicon glyphicon-plus"></span>
                             </a>
-                            <a href="/checkout" class="btn btn-success">
-                                Finalizar pedido <span class="glyphicon glyphicon-play"></span>
-                            </a>
+
+                            <br /> <hr />
+
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="a">
+                                <!--Tipo do botão-->
+                                <input type="hidden" name="cmd" value="_xclick" />
+                                <!--Vendedor e URL de retorno, cancelamento e notificação-->
+                                <input type="hidden" name="business" value="teste@empresa.com.br" />
+                                <input type="hidden" name="return" value="http://loja.com.br/retorno" />
+                                <input type="hidden" name="cancel" value="http://loja.com.br/cancelamento" />
+                                <input type="hidden" name="notify_url" value="http://loja.com.br/notificacao" />
+                                <!--Internacionalização e localização da página de pagamento-->
+                                <input type="hidden" name="charset" value="utf-8" />
+                                <input type="hidden" name="lc" value="BR" />
+                                <input type="hidden" name="country_code" value="BR" />
+                                <input type="hidden" name="currency_code" value="BRL" />
+                                <!--Informações sobre o produto e seu valor-->
+                                <input type="hidden" name="amount" value="@total" />
+                                @*<input type="hidden" name="item_name" value="@item.SaboresId" />*@
+                                <input type="hidden" name="quantity" value="1" />
+                                <!--Botão para submissão do formulário-->
+                                <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" />
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -163,3 +182,7 @@
         </div>
     </div>
 </div>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="~/Content/albertos - placehold/js/estiloProjeto.js"></script>

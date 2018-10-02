@@ -243,6 +243,7 @@
     <Content Include="Content\albertos - placehold\js\contact-form.js" />
     <Content Include="Content\albertos - placehold\js\custom-inline-js.js" />
     <Content Include="Content\albertos - placehold\js\custom.js" />
+    <Content Include="Content\albertos - placehold\js\estiloProjeto.js" />
     <Content Include="Content\albertos - placehold\js\extensions\index.php" />
     <Content Include="Content\albertos - placehold\js\extensions\revolution.extension.actions.min.js" />
     <Content Include="Content\albertos - placehold\js\extensions\revolution.extension.carousel.min.js" />
