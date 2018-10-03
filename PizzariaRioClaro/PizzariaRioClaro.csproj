@@ -226,6 +226,7 @@
     <Content Include="Content\albertos - placehold\css\pizza.png" />
     <Content Include="Content\albertos - placehold\css\simple-line-icons.css" />
     <Content Include="Content\albertos - placehold\css\style.css" />
+    <Content Include="Content\albertos - placehold\css\wallpaper.jpeg" />
     <Content Include="Content\albertos - placehold\images\bg-menu.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.jpg" />
     <Content Include="Content\albertos - placehold\images\cart.png" />
@@ -329,7 +330,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CarrinhoController.cs" />
     <Compile Include="Controllers\FuncionarioAddController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -425,7 +425,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Pessoa\Cadastro.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
-    <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Sobre\Index.cshtml" />

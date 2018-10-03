@@ -1,4 +1,7 @@
-﻿<link rel="stylesheet" href="~/Content/dist/css/bootstrap.css" />
+﻿@using PizzariaRioClaro.Models;
+
+<link rel="stylesheet" href="~/Content/dist/css/bootstrap.css" />
+<link rel="stylesheet" href="~/Content/albertos - placehold/css/estiloProjeto.css" />
 
 <div>
     <form>
@@ -14,7 +17,21 @@
         <div class="row">
             <div class="col w-25"></div>
             <div class="col w-50">
-                <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;"><img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png"> Cadastrar Funcionário</a>
+
+                @{
+                    if (Session["PessoaLogada"] as Pessoa != null)
+                    {
+                        var pessoa = Session["PessoaLogada"] as Pessoa;
+                        if (pessoa.TipoDePessoa == 'A')
+                        {
+                            <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;">
+                                <img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png">
+                                Cadastrar Funcionário
+                            </a>
+                        }
+                    }
+                }
+
                 <br />
                 <br />
             </div>

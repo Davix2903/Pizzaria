@@ -1,8 +1,11 @@
 ﻿@using PizzariaRioClaro.Models;
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="~/Content/albertos - placehold/css/estiloProjeto.css" />
+
 
 <div class="container-wrapper">
-    <div class="page-bg" style=" background-image: url(upload/bg-pizza.jpg); "></div>
+    <div class="page-bg" style=" background-image: url('/Content/albertos - placehold/upload/'); "></div>
     <div id="container">
         <!-- start container -->
         <div class="page-title-wrapper">
@@ -35,7 +38,20 @@
                             var pessoa = Session["PessoaLogada"] as Pessoa;
                             if (pessoa.TipoDePessoa == 'C')
                             {
-                                <a href="#" onclick="adiciona(@sabor.Id, 'S')">Adicionar ao carrinho</a>
+                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@sabor.Id, 'S')">
+                                    Adicionar ao carrinho
+                                </button>
+                            }
+                        }
+
+                        @if (Session["PessoaLogada"] as Pessoa != null)
+                        {
+                            var pessoa = Session["PessoaLogada"] as Pessoa;
+                            if (pessoa.TipoDePessoa != 'C')
+                            {
+                                <button type="button" class="btn btn-danger openSans">
+                                    <i class="removertr"><strong>Remover Produto</strong></i>
+                                </button>
                             }
                         }
                         <hr />
@@ -86,8 +102,9 @@
                             var pessoa = Session["PessoaLogada"] as Pessoa;
                             if (pessoa.TipoDePessoa == 'C')
                             {
-                        <a href="#" onclick="adiciona(@refrigerante.Id, 'R')">Adicionar ao carrinho</a>
-                            }
+                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@refrigerante.Id, 'S')">
+                                    Adicionar ao carrinho
+                                </button>}
                         }
                         <hr />
                     </div>
@@ -135,8 +152,9 @@
                             var pessoa = Session["PessoaLogada"] as Pessoa;
                             if (pessoa.TipoDePessoa == 'C')
                             {
-                        <a href="#" onclick="adiciona(@sabor.Id, 'D')">Adicionar ao carrinho</a>
-                            }
+                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@sabor.Id, 'S')">
+                                    Adicionar ao carrinho
+                                </button>}
                         }
                         <hr />
                     </div>
@@ -165,3 +183,7 @@
         }
     </script>
 }
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="~/Content/albertos - placehold/js/estiloProjeto.js"></script>
