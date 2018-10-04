@@ -5,7 +5,7 @@
 }
 
 .wallpaperpizza {
-    background-image: url(wallpaper.jpeg);
+    background-image: url(269.jpg);
     background-repeat: no-repeat;
-    background-size: unset;
+    background-size: cover;
 }

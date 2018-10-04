@@ -191,6 +191,7 @@
     <Content Include="Content\albertos - placehold\about.html" />
     <Content Include="Content\albertos - placehold\blog.html" />
     <Content Include="Content\albertos - placehold\contact.html" />
+    <Content Include="Content\albertos - placehold\css\269.jpg" />
     <Content Include="Content\albertos - placehold\css\animsition.css" />
     <Content Include="Content\albertos - placehold\css\custom_script.css" />
     <Content Include="Content\albertos - placehold\css\estiloProjeto.css" />
@@ -395,6 +396,10 @@
     <Compile Include="Migrations\20181001185735_ItensPedido.cs" />
     <Compile Include="Migrations\20181001185735_ItensPedido.designer.cs">
       <DependentUpon>20181001185735_ItensPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20181004164546_removendoTipopizza.cs" />
+    <Compile Include="Migrations\20181004164546_removendoTipopizza.designer.cs">
+      <DependentUpon>20181004164546_removendoTipopizza.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\PizzariaContextModelSnapshot.cs" />
     <Compile Include="Models\Cliente.cs" />

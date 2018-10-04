@@ -29,7 +29,7 @@
                             <div class="single-offer-title">@sabor.Sabor</div>
                             <div class="single-offer-content">@sabor.Ingredientes</div>
                         </div>
-                        <div class="single-offer-price">$@sabor.Preco</div>
+                        <div class="single-offer-price">R$@sabor.Preco</div>
                         <div class="clear"></div>
                         <br />
 
@@ -102,7 +102,7 @@
                             var pessoa = Session["PessoaLogada"] as Pessoa;
                             if (pessoa.TipoDePessoa == 'C')
                             {
-                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@refrigerante.Id, 'S')">
+                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@refrigerante.Id, 'R')">
                                     Adicionar ao carrinho
                                 </button>}
                         }
@@ -152,7 +152,7 @@
                             var pessoa = Session["PessoaLogada"] as Pessoa;
                             if (pessoa.TipoDePessoa == 'C')
                             {
-                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@sabor.Id, 'S')">
+                                <button style="color: white" class="btn btn-success openSans" onclick="adiciona(@sabor.Id, 'D')">
                                     Adicionar ao carrinho
                                 </button>}
                         }

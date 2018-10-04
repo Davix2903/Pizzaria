@@ -14,9 +14,6 @@ namespace PizzariaRioClaro.Models
         public string Sabor { get; set; }
 
         [Required]
-        public char TipoPizza { get; set; }
-
-        [Required]
         public string Ingredientes { get; set; }
 
         [Required]
