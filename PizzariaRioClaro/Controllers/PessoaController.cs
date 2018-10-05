@@ -25,6 +25,7 @@ namespace PizzariaRioClaro.Controllers
         public ActionResult Logout()
         {
             Session["PessoaLogada"] = null;
+            Session.Abandon();
             return RedirectToAction("Login", "Pessoa");
         }
 

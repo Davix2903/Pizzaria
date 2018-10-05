@@ -35,7 +35,7 @@ namespace PizzariaRioClaro.Controllers
                 if (item.SaboresId.HasValue)
                     item.Sabores = saborDAO.BuscaPorId((int)item.SaboresId);
             }
-            
+
             return View(carrinho);
         }
 
@@ -69,6 +69,61 @@ namespace PizzariaRioClaro.Controllers
             carrinho.AdicionaItem(id, tipo);
 
             return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult AumentaQdt(int id, char tipo)
+        {
+            var carrinho = Session["Carrinho"] as Pedido;
+            if (carrinho == null)
+            {
+                carrinho = new Pedido();
+                carrinho.Status = "Pendente";
+                Session["Carrinho"] = carrinho;
+            }
+            
+            carrinho.AumentaQtd(id, tipo);
+
+            return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult DiminuiQdt(int id, char tipo)
+        {
+            var carrinho = Session["Carrinho"] as Pedido;
+            if (carrinho == null)
+            {
+                carrinho = new Pedido();
+                carrinho.Status = "Pendente";
+                Session["Carrinho"] = carrinho;
+            }
+
+            carrinho.DiminuiQtd(id, tipo);
+
+            return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public JsonResult Exclui(int id, char tipo)
+        {
+            var carrinho = Session["Carrinho"] as Pedido;
+            if (carrinho == null)
+            {
+                carrinho = new Pedido();
+                carrinho.Status = "Pendente";
+                Session["Carrinho"] = carrinho;
+            }
+
+            carrinho.RemoveItem(id, tipo);
+
+            return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult RemoveItem (int id, char tipo)
+        {
+            var carrinho = Session["Carrinho"] as Pedido;
+
+            var jaExiste = false;
+
+            
+            return Json(new { removeu = true }, JsonRequestBehavior.AllowGet);
         }
     }
 }

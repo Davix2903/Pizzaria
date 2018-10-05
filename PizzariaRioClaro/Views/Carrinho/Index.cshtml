@@ -60,7 +60,9 @@
                                             <td class="col-md-1 text-center"><strong>$@item.Sabores.Preco</strong></td>
                                             <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
-                                                <button type="button" class="btn btn-danger">
+                                                <span style="display: none;" class="idItem">@item.SaboresId</span>
+                                                <span style="display: none;" class="tipoItem">S</span>
+                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.SaboresId })" type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -93,7 +95,9 @@
                                             <td class="col-md-1 text-center"><strong>$@item.SaboresDoce.Preco</strong></td>
                                             <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
-                                                <button type="button" class="btn btn-danger">
+                                                <span style="display: none;" class="idItem">@item.SaboresDoceId</span>
+                                                <span style="display: none;" class="tipoItem">D</span>
+                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.SaboresDoce.Id })" type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -109,6 +113,7 @@
                                             </td>
                                             <td class="col-md-3"><h5><strong>@item.Refrigerante.Marca - @item.Refrigerante.Tamanho</strong></h5></td>
                                             <td class="col-md-1" style="text-align: center">
+                                                
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" min="0" step="1" ng-click="minus()">
@@ -126,7 +131,9 @@
                                             <td class="col-md-1 text-center"><strong>$@item.Refrigerante.Preco</strong></td>
                                             <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
                                             <td class="col-sm-1 col-md-1 text-center">
-                                                <button type="button" class="btn btn-danger">
+                                                <span style="display: none;" class="idItem">@item.RefrigeranteId</span>
+                                                <span style="display: none;" class="tipoItem">R</span>
+                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.RefrigeranteId })" type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -167,7 +174,7 @@
                                 <input type="hidden" name="currency_code" value="BRL" />
                                 <!--Informações sobre o produto e seu valor-->
                                 <input type="hidden" name="amount" value="@total" />
-                                @*<input type="hidden" name="item_name" value="@item.SaboresId" />*@
+                                <input type="hidden" name="item_name" value="@string.Join(", ", Model.Itens.Select(x => (x.Sabores?.Sabor ?? (x.SaboresDoce?.Sabor ?? (x.Refrigerante?.Marca ?? "Produto inválido"))) + " (" + x.Quantidade + "x)").ToArray())" />
                                 <input type="hidden" name="quantity" value="1" />
                                 <!--Botão para submissão do formulário-->
                                 <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" />
