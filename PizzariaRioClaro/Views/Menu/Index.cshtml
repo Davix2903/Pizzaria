@@ -44,16 +44,6 @@
                             }
                         }
 
-                        @if (Session["PessoaLogada"] as Pessoa != null)
-                        {
-                            var pessoa = Session["PessoaLogada"] as Pessoa;
-                            if (pessoa.TipoDePessoa != 'C')
-                            {
-                                <button type="button" class="btn btn-danger openSans">
-                                    <i class="removertr"><strong>Remover Produto</strong></i>
-                                </button>
-                            }
-                        }
                         <hr />
 
 

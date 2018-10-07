@@ -38,31 +38,30 @@
                                         subtotal = item.Sabores.Preco * item.Quantidade;
                                         total += subtotal;
                                         <tr>
-                                            <td class="col-md-1 text-center">
-                                                <h4><a href="#">@item.SaboresId</a></h4>
-                                            </td>
-                                            <td class="col-md-3"><h5><strong>@item.Sabores.Sabor</strong></h5></td>
+                                            <td class="col-md-1 IdProduto">@item.SaboresId</td>
+                                            <td class="col-md-3 h5 font-weight-bold">@item.Sabores.Sabor</td>
                                             <td class="col-md-1" style="text-align: center">
+                                                <span style="display: none;" class="tipoDoProduto">S</span>
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
-                                                        <button type="button" class="btn btn-default btn-number" min="0" step="1" ng-click="minus()">
-                                                            <i class="glyphicon glyphicon-minus"></i>
+                                                        <button type="button" class="btn btn-default btn-number" ng-click="minus()">
+                                                            <i class="glyphicon glyphicon-minus removerqtd"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center quantidade" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
-                                                            <i class="glyphicon glyphicon-plus"></i>
+                                                            <i class="glyphicon glyphicon-plus adicionarqtd"></i>
                                                         </button>
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>$@item.Sabores.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
+                                            <td class="col-md-1 text-center font-weight-bold precoProduto">R$ @item.Sabores.Preco</td>
+                                            <td class="col-md-1 text-center font-weight-bold subtotalProduto">R$ @subtotal</td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <span style="display: none;" class="idItem">@item.SaboresId</span>
                                                 <span style="display: none;" class="tipoItem">S</span>
-                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.SaboresId })" type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -73,31 +72,30 @@
                                         subtotal = item.SaboresDoce.Preco * item.Quantidade;
                                         total += subtotal;
                                         <tr>
-                                            <td class="col-md-1 text-center">
-                                                <h4><a href="#">@item.SaboresDoceId</a></h4>
-                                            </td>
-                                            <td class="col-md-3"><h5><strong>@item.SaboresDoce.Sabor</strong></h5></td>
+                                            <td class="col-md-1 IdProduto">@item.SaboresDoceId</td>
+                                            <td class="col-md-3 h5 font-weight-bold">@item.SaboresDoce.Sabor</td>
                                             <td class="col-md-1" style="text-align: center">
+                                                <span style="display: none;" class="tipoDoProduto">D</span>
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" min="0" step="1" ng-click="minus()">
-                                                            <i class="glyphicon glyphicon-minus"></i>
+                                                            <i class="glyphicon glyphicon-minus removerqtd"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center quantidade" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
-                                                            <i class="glyphicon glyphicon-plus"></i>
+                                                            <i class="glyphicon glyphicon-plus adicionarqtd"></i>
                                                         </button>
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>$@item.SaboresDoce.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
+                                            <td class="col-md-1 text-center font-weight-bold precoProduto">R$ @item.SaboresDoce.Preco</td>
+                                            <td class="col-md-1 text-center font-weight-bold subtotalProduto">R$ @subtotal</td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <span style="display: none;" class="idItem">@item.SaboresDoceId</span>
                                                 <span style="display: none;" class="tipoItem">D</span>
-                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.SaboresDoce.Id })" type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -108,32 +106,30 @@
                                         subtotal = item.Refrigerante.Preco * item.Quantidade;
                                         total += subtotal;
                                         <tr>
-                                            <td class="col-md-1 text-center">
-                                                <h4><a href="#">@item.RefrigeranteId</a></h4>
-                                            </td>
-                                            <td class="col-md-3"><h5><strong>@item.Refrigerante.Marca - @item.Refrigerante.Tamanho</strong></h5></td>
+                                            <td class="col-md-1 IdProduto">@item.RefrigeranteId</td>
+                                            <td class="col-md-3 h5 font-weight-bold">@item.Refrigerante.Marca - @item.Refrigerante.Tamanho</td>
                                             <td class="col-md-1" style="text-align: center">
-                                                
+                                                <span style="display: none;" class="tipoDoProduto">R</span>
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" min="0" step="1" ng-click="minus()">
-                                                            <i class="glyphicon glyphicon-minus adicionarQuantidade"></i>
+                                                            <i class="glyphicon glyphicon-minus removerqtd"></i>
                                                         </button>
                                                     </span>
-                                                    <input type="text" class="form-control input-number text-center" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
+                                                    <input type="text" class="form-control input-number text-center quantidade" value="@item.Quantidade" ng-change="change()" ng-model="qnt" required>
                                                     <span class="input-group-btn">
                                                         <button type="button" class="btn btn-default btn-number" ng-click="plus()">
-                                                            <i class="glyphicon glyphicon-plus removerQuantidade"></i>
+                                                            <i class="glyphicon glyphicon-plus adicionarqtd"></i>
                                                         </button>
                                                     </span>
                                                 </div>
                                             </td>
-                                            <td class="col-md-1 text-center"><strong>$@item.Refrigerante.Preco</strong></td>
-                                            <td class="col-md-1 text-center"><strong>$@subtotal</strong></td>
+                                            <td class="col-md-1 text-center font-weight-bold precoProduto">R$ @item.Refrigerante.Preco</td>
+                                            <td class="col-md-1 text-center font-weight-bold subtotalProduto">R$ @subtotal</td>
                                             <td class="col-sm-1 col-md-1 text-center">
                                                 <span style="display: none;" class="idItem">@item.RefrigeranteId</span>
                                                 <span style="display: none;" class="tipoItem">R</span>
-                                                <button href="@Url.Action("RemoveItem", "Carrinho", new { id = item.RefrigeranteId })" type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-danger">
                                                     <i class="glyphicon glyphicon-remove removertr"></i>
                                                 </button>
                                             </td>
@@ -146,7 +142,7 @@
                                 <td></td>
                                 <td></td>
                                 <td colspan="2" class="text-right"><h5>Total a pagar</h5></td>
-                                <td class="text-center"><h5><strong>$@total</strong></h5></td>
+                                <td class="text-center totalaPagar"><h5>$@total</></h5></td>
                                 <td></td>
                             </tr>
                         </tbody>
