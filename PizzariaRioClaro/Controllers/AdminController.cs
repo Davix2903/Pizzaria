@@ -1,4 +1,5 @@
 ﻿using PizzariaRioClaro.Filters;
+using PizzariaRioClaro.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,16 @@ namespace PizzariaRioClaro.Controllers
         // GET: Admin
         public ActionResult Index()
         {
-            return View();
+            var pessoa = (Pessoa)Session["PessoaLogada"];
+
+            if (pessoa.TipoDePessoa == 'A' || pessoa.TipoDePessoa == 'F')
+            {
+                return View();
+            }
+
+            return RedirectToAction("Index", "Home");
         }
+
+
     }
 }

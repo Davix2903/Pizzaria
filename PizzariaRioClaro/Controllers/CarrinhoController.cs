@@ -83,6 +83,8 @@ namespace PizzariaRioClaro.Controllers
             
             carrinho.AumentaQtd(id, tipo);
 
+
+
             return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
         }
 
@@ -97,6 +99,8 @@ namespace PizzariaRioClaro.Controllers
             }
 
             carrinho.DiminuiQtd(id, tipo);
+
+            carrinho = Session["Carrinho"] as Pedido;
 
             return Json(new { adicionou = true }, JsonRequestBehavior.AllowGet);
         }

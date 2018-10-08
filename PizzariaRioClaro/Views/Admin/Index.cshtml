@@ -1,49 +1,60 @@
 ﻿@using PizzariaRioClaro.Models;
 
-<link rel="stylesheet" href="~/Content/dist/css/bootstrap.css" />
-<link rel="stylesheet" href="~/Content/albertos - placehold/css/estiloProjeto.css" />
+@{
+    if (Session["PessoaLogada"] as Pessoa != null)
+    {
+        var pessoa = Session["PessoaLogada"] as Pessoa;
+        if (pessoa.TipoDePessoa != 'C')
+        {
+
+            <link rel="stylesheet" href="~/Content/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/Content/albertos - placehold/css/estiloProjeto.css" />
 
 
-<div>
-    <form>
-        <div class="row">
-            <div class="col w-25"></div>
-            <div class="col w-50" style="margin-top: 150px;">
-                <a href="/SaborOuRefri/" class="btn btn-primary openSans" style="width: 350px; height: 60px;"><img src="https://png.icons8.com/office/40/c0392b/open-box.png" /> Cadastrar Produtos</a>
-                <br />
-                <br />
+            <div>
+                <form>
+                    <div class="row">
+                        <div class="col w-25"></div>
+                        <div class="col w-50" style="margin-top: 150px;">
+                            <a href="/SaborOuRefri/" class="btn btn-primary openSans" style="width: 350px; height: 60px;"><img src="https://png.icons8.com/office/40/c0392b/open-box.png" /> Cadastrar Produtos</a>
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col w-25"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col w-25"></div>
+                        <div class="col w-50">
+
+                            @{
+                                if (Session["PessoaLogada"] as Pessoa != null)
+                                {
+                                    pessoa = Session["PessoaLogada"] as Pessoa;
+                                    if (pessoa.TipoDePessoa == 'A')
+                                    {
+                                        <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;">
+                                            <img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png">
+                                            Cadastrar Funcionário
+                                        </a>
+                                    }
+                                }
+                            }
+
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col w-25"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col w-25"></div>
+                        <div class="col w-50">
+                            <a href="/Home/" class="btn btn-danger openSans" style="width: 350px; height: 60px;"> <img src="https://png.icons8.com/metro/40/ffffff/back.png"> Voltar </a>
+                        </div>
+                        <div class="col w-25"></div>
+                    </div>
+                </form>
             </div>
-            <div class="col w-25"></div>
-        </div>
-        <div class="row">
-            <div class="col w-25"></div>
-            <div class="col w-50">
+        }
+    }
+}
 
-                @{
-                    if (Session["PessoaLogada"] as Pessoa != null)
-                    {
-                        var pessoa = Session["PessoaLogada"] as Pessoa;
-                        if (pessoa.TipoDePessoa == 'A')
-                        {
-                            <a href="/FuncionarioAdd/" class="btn btn-primary openSans" style="width: 350px; height: 60px;">
-                                <img src="https://png.icons8.com/ultraviolet/50/c0392b/collaborator-male.png">
-                                Cadastrar Funcionário
-                            </a>
-                        }
-                    }
-                }
-
-                <br />
-                <br />
-            </div>
-            <div class="col w-25"></div>
-        </div>
-        <div class="row">
-            <div class="col w-25"></div>
-            <div class="col w-50">
-                <a href="/Home/" class="btn btn-danger openSans" style="width: 350px; height: 60px;"> <img src="https://png.icons8.com/metro/40/ffffff/back.png"> Voltar </a>
-            </div>
-            <div class="col w-25"></div>
-        </div>
-    </form>
-</div>
